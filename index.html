@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timer App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <div class="card">
+      <h1>Timer App</h1>
+        <form>
+          <div class="input-container">
+            <label for="hours">Hours:</label>
+            <div class="hours-input">
+              <input type="number" id="hours" name="hours" min="0" max="23" />
+            </div>
+            <label for="minutes">Minutes:</label>
+            <div class="minutes-input">
+              <input type="number" id="minutes" name="minutes" min="0" max="59" />
+            </div>
+            <label for="seconds">Seconds:</label>
+            <div class="seconds-input">
+              <input type="number" id="seconds" name="seconds" min="0" max="59" />
+            </div>
+          </div>
+        </form>
+        <div class="buttons">
+          <button type="button" id="startBtn">Start</button>
+          <button type="button" id="stopBtn" disabled>Stop</button>
+          <button type="button" id="resetBtn" disabled>Reset</button>
+        </div>
+      </div>
+      <div>
+        <dialog id="myDialog">
+          <audio id="alarm" src="alarm.mp3"></audio>
+          <p>Time's up!</p>
+          <button onclick="closeDialog()">OK</button>
+        </dialog>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
